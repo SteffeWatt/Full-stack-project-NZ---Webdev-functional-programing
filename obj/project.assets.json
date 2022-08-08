@@ -1372,11 +1372,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\steff\\Desktop\\NZ 2022\\COMPSCI-335-Functional Programming\\A1-template\\A1.csproj",
+      "projectUniqueName": "C:\\Users\\steff\\Desktop\\NZ 2022\\COMPSCI-335-Functional Programming\\Fullstack Project NZ 2022\\A1.csproj",
       "projectName": "A1",
-      "projectPath": "C:\\Users\\steff\\Desktop\\NZ 2022\\COMPSCI-335-Functional Programming\\A1-template\\A1.csproj",
+      "projectPath": "C:\\Users\\steff\\Desktop\\NZ 2022\\COMPSCI-335-Functional Programming\\Fullstack Project NZ 2022\\A1.csproj",
       "packagesPath": "C:\\Users\\steff\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\steff\\Desktop\\NZ 2022\\COMPSCI-335-Functional Programming\\A1-template\\obj\\",
+      "outputPath": "C:\\Users\\steff\\Desktop\\NZ 2022\\COMPSCI-335-Functional Programming\\Fullstack Project NZ 2022\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\steff\\AppData\\Roaming\\NuGet\\NuGet.Config",

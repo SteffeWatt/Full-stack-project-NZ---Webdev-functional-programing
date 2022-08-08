@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Vud6HmDuHYrDEJ99d6Ul8ZqX7Mth9Ld1HPYvWHEwyGmaFYNf5FHR8YZY3pAU4zkbX7Sfr1M/zVaJ+3uvwrCwmQ==",
+  "dgSpecHash": "JZRhBpFRj/TxwBPwPiP/eE6IeWsbqOVX7BGeYO2XFZQ4zHFf3Up9EENCUoCT5S5hGFJwp8mvtj0Qy9PE+LkLYQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\steff\\Desktop\\NZ 2022\\COMPSCI-335-Functional Programming\\A1-template\\A1.csproj",
+  "projectFilePath": "C:\\Users\\steff\\Desktop\\NZ 2022\\COMPSCI-335-Functional Programming\\Fullstack Project NZ 2022\\A1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\steff\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\steff\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.7\\microsoft.data.sqlite.core.6.0.7.nupkg.sha512",
