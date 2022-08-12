@@ -13,11 +13,11 @@ namespace A1.Data
         public A1DBContext(DbContextOptions<A1DBContext> options) : base(options) { }
         public DbSet<Product> Products { get; set; }
        
-        /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Data Source=A1Database.sqlite");
         }
-        */
+        
         
 
     }

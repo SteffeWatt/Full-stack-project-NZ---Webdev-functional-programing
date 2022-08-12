@@ -5,17 +5,6 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 
-/* watch lectures on this
-private static void AddRecords() {
-    {
-        List<Product> products = new List<Product>
-    {
-        new Product { Id = "1", "bowlingball", "This is a bowling ball", "50$" }
-    };
-    }
-}
-*/
-
 
 // Add services to the container.
 
@@ -24,14 +13,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//this line of code is gets the key from "appsettings.json
+//this line of code gets the key from "appsettings.json
 builder.Services.AddDbContext<A1DBContext>(options => options.UseSqlite(builder.Configuration["WebAPIConnection"]));
 
-//not sure if there is suposed to be 2 of these in here ( was in lecturer's code)
-builder.Services.AddControllers();
-
-//Look into this, see lecture on api (3)
-builder.Services.AddScoped<IA1Repo>();
+//the builder uses the interface and the actual repo here
+builder.Services.AddScoped<IA1Repo,A1Repo>();
 
 
     var app = builder.Build();

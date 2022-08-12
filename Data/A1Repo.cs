@@ -21,16 +21,17 @@ namespace A1.Data
 
         public IEnumerable<Product> GetAllProducts()
         {
-            throw new NotImplementedException();
+            IEnumerable<Product> products = DBContext.Products.ToList<Product>();
+            return products;
         }
-
-        public Product GetProductById(int id)
+        //this method finds a product in our database with a matching id
+        public Product GetProductById(String id)
         {
             Product product = DBContext.Products.FirstOrDefault(P => P.Id == id);
             return product;
         }
 
-
+        //this method saves the changes we do to the database
         public void SaveDBChanges()
         {
             DBContext.SaveChanges();
