@@ -1,15 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using A1.Models;
 
 
-class A1DBContext : DbContext
+namespace A1.Data
 {
-    //why? - look into this
-    public A1DBContext(DbContextOptions<A1DBContext>options):base(options) {}
-    // look into this products cant be null
-    public DbSet<Product> Products { get; set; }
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    public class A1DBContext : DbContext
     {
-        optionsBuilder.UseSqlite("Data Source=A1Database.sqlite");
+        public A1DBContext(DbContextOptions<A1DBContext> options) : base(options) { }
+        public DbSet<Product> Products { get; set; }
+       
+        /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlite("Data Source=A1Database.sqlite");
+        }
+        */
+        
+
     }
 }
+
