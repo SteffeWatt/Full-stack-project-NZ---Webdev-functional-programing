@@ -26,8 +26,14 @@ namespace A1.Data
 
         public Product GetProductById(int id)
         {
-            Product product = this.DBContext.Products.FirstOrDefault(P => P.Id == id);
+            Product product = DBContext.Products.FirstOrDefault(P => P.Id == id);
             return product;
+        }
+
+
+        public void SaveDBChanges()
+        {
+            DBContext.SaveChanges();
         }
 
 
