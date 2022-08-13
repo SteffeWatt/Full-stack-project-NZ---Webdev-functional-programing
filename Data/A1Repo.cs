@@ -24,11 +24,22 @@ namespace A1.Data
             IEnumerable<Product> products = DBContext.Products.ToList<Product>();
             return products;
         }
-        //this method finds a product in our database with a matching id
-        public Product GetProductById(String id)
+        //this method finds a product in our database were the string does match with or contains letters / parts of the string
+
+        //Implement this method tomorrov
+        public IEnumerable<Product> GetProductContainingName(String id)
         {
-            Product product = DBContext.Products.FirstOrDefault(P => P.Id == id);
-            return product;
+            
+            
+            IEnumerable<Product> products = from product in DBContext.Products
+                                            where product.Name.ToLower().Contains(id.ToLower())
+                                            select product;
+            return products;
+         
+
+
+
+           // return product;
         }
 
         //this method saves the changes we do to the database

@@ -62,6 +62,14 @@ namespace A1.Controllers
             
         }
 
+        [HttpGet("GetItems")]
+        public ActionResult GetItems(String name)
+        {
+            IEnumerable<Product> products = Repository.GetProductContainingName(name);
+            
+            return Json(products);
+        }
+
 
     }
 }
