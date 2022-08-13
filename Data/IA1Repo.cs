@@ -14,6 +14,8 @@ namespace A1.Data
         //this method will get product with matching id ( if there is one)
         IEnumerable<Product> GetProductContainingName(string id);
         //this method will save the changes done to the Database
+
+       // IEnumerable<Product> GetProductPhoto(string id);
         void SaveDBChanges();
 
     }

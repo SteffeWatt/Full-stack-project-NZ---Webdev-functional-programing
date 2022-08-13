@@ -70,6 +70,23 @@ namespace A1.Controllers
             return Json(products);
         }
 
+        [HttpGet("GetPhoto")]
+        public IActionResult GetPhoto(String id)
+        {
+
+            try
+            {
+                Byte[] b = System.IO.File.ReadAllBytes(@"ItemsImages/" + id + ".jpg");
+                return File(b, "image/jpg");
+            }
+
+            catch (FileNotFoundException)
+            {
+                Byte[] b = System.IO.File.ReadAllBytes(@"ItemsImages/default.png");
+                return File(b, "image/png");
+            }
+
+        }
 
     }
 }

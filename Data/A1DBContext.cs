@@ -17,8 +17,9 @@ namespace A1.Data
         {
             optionsBuilder.UseSqlite("Data Source=A1Database.sqlite");
         }
-        
-        
+        //5341529830
+
+
 
     }
 }
