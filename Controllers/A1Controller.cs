@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using A1.Models;
 using A1.Data;
-//using A1.Dtos;
+using A1.Dtos;
 
 namespace A1.Controllers
 {
@@ -87,6 +87,22 @@ namespace A1.Controllers
             }
 
         }
+        //5431456821.gif
 
+
+
+        [HttpPost("WriteComments")]
+        public ActionResult<CommentDto> WriteComment(CommentDto comment)
+        {
+            // this method creates an object of the comment class. we use datetime to set time, and httpcontext for ip adress
+            Comment c = new Comment {Name = comment.Name, UserComment = comment.UserComment,IP = HttpContext.Connection.RemoteIpAddress.ToString() , Time = DateTime.Now.ToString("yyyy _ MM/dd _ H:mm")};
+
+            // this line adds our previously created object into the database
+            Comment AddedComment = Repository.Writecomment(c);
+
+            //this line adds the comment and assign it into a commentDto class, wich we use to return the coment back to the client in the response body
+            CommentDto WrittenComment = new CommentDto { Name = AddedComment.Name, UserComment = AddedComment.UserComment };
+            return Json(WrittenComment);
+        }
     }
 }

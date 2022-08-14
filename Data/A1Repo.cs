@@ -35,23 +35,27 @@ namespace A1.Data
                                             where product.Name.ToLower().Contains(id.ToLower())
                                             select product;
             return products;
-         
-
-
-
-           // return product;
+            // return product;
         }
 
-        
+        public Comment Writecomment(Comment comment)
+        {
+            DBContext.Add(comment);
+            SaveDBChanges();
+            return comment;
+        }
+
 
         //this method saves the changes we do to the database
         public void SaveDBChanges()
         {
+
+           // IEnumerable<Comment> comments = DBContext.Comments.ToList<Comment>(); use this line and add comments.
+            
             DBContext.SaveChanges();
         }
 
-
-
+        
     }
 }
 

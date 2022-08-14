@@ -15,7 +15,9 @@ namespace A1.Data
         IEnumerable<Product> GetProductContainingName(string id);
         //this method will save the changes done to the Database
 
-       // IEnumerable<Product> GetProductPhoto(string id);
+        Comment Writecomment(Comment comment);
+
+        // IEnumerable<Product> GetProductPhoto(string id);
         void SaveDBChanges();
 
     }
