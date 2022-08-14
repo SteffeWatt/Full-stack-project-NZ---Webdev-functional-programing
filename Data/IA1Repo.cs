@@ -1,8 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using A1.Models;
+
+
+
 
 namespace A1.Data
 {
@@ -16,6 +15,8 @@ namespace A1.Data
         //this method will save the changes done to the Database
 
         Comment Writecomment(Comment comment);
+
+        IEnumerable<Comment> GetRecentComments();
 
         // IEnumerable<Product> GetProductPhoto(string id);
         void SaveDBChanges();

@@ -1,5 +1,3 @@
-using System.Linq;
-using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
 namespace A1.Models
@@ -8,7 +6,6 @@ namespace A1.Models
     {
         [Key]
         public int Id { get; set; }
-        
         public string? Name { get; set; }
         [Required]
         public string UserComment { get; set; }

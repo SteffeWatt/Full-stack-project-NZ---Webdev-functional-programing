@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using A1.Models;
 using A1.Data;
@@ -104,5 +100,18 @@ namespace A1.Controllers
             CommentDto WrittenComment = new CommentDto { Name = AddedComment.Name, UserComment = AddedComment.UserComment };
             return Json(WrittenComment);
         }
+
+        //Get - /api/AllItems
+        [HttpGet("GetComments")]
+        public ActionResult<CommentDto> GetComments()
+        {
+            //could not manage to get last 5 items..... so fuction returns all comments
+            IEnumerable<Comment> comments = Repository.GetRecentComments();
+            return Json(comments);
+
+
+        }
+
+
     }
 }

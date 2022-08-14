@@ -1,9 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 using A1.Models;
+
+
 
 namespace A1.Data
 {
@@ -45,6 +42,12 @@ namespace A1.Data
             return comment;
         }
 
+        public IEnumerable<Comment> GetRecentComments()
+        {
+            IEnumerable<Comment> comments = DBContext.Comments.ToList<Comment>();
+            return comments;
+        }
+
 
         //this method saves the changes we do to the database
         public void SaveDBChanges()
@@ -55,8 +58,5 @@ namespace A1.Data
             DBContext.SaveChanges();
         }
 
-        
     }
 }
-
-
