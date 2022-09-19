@@ -7,7 +7,7 @@ namespace A1.Controllers
 {
 
     [ApiController]
-    //this string is the path wee need to use when handling traffic (in and out)
+    //this string is the path we need to use when handling traffic (in and out)
     [Route("api")]
     public class A1Controller : Controller
     {
@@ -26,8 +26,8 @@ namespace A1.Controllers
         [HttpGet("GetLogo")]
         public IActionResult GetLogo()
         {
-            Byte[] b = System.IO.File.ReadAllBytes(@"Logos/Logo.png");
-            return File(b, "image/png");
+            Byte[] file = System.IO.File.ReadAllBytes(@"Logos/Logo.png");
+            return File(file, "image/png");
         }
 
 
@@ -35,8 +35,8 @@ namespace A1.Controllers
         [HttpGet("GetFavIcon")]
         public IActionResult GetFavIcon()
         {
-            Byte[] b = System.IO.File.ReadAllBytes(@"Logos/Logo-192x192.png");
-            return File(b, "image/png");
+            Byte[] file = System.IO.File.ReadAllBytes(@"Logos/Logo-192x192.png");
+            return File(file, "image/png");
         }
 
 
@@ -72,18 +72,20 @@ namespace A1.Controllers
 
             try
             {
-                Byte[] b = System.IO.File.ReadAllBytes(@"ItemsImages/" + id + ".jpg");
-                return File(b, "image/jpg");
+                Byte[] file = System.IO.File.ReadAllBytes(@"ItemsImages/" + id + ".jpg");
+                return File(file, "image/jpg");
             }
 
             catch (FileNotFoundException)
             {
-                Byte[] b = System.IO.File.ReadAllBytes(@"ItemsImages/default.png");
-                return File(b, "image/png");
+                Byte[] file = System.IO.File.ReadAllBytes(@"ItemsImages/default.png");
+                return File(file, "image/png");
             }
 
         }
-        //5431456821.gif
+        //5431456821.gif  5431456821
+        //5431456829
+
 
 
 
