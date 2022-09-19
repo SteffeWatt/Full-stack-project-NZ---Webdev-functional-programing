@@ -1,0 +1,44 @@
+
+body{
+    width: 100%;
+}
+
+#Logo{
+    height: 100px;
+}
+
+#Main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+#Header{
+    display: flex;
+    justify-content: space-between;
+    background-color: red;
+
+}
+
+#Header_left{
+
+    display: flex;
+    justify-content: space-evenly;
+
+
+}
+
+#Header_right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1rem;
+}
+
+#Header_right h2{
+
+    font-size: 1.5rem;
+
+    padding: 0rem 1rem 0rem 1rem;
+}
