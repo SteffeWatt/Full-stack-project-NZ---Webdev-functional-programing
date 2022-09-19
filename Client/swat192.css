@@ -1,6 +1,7 @@
 
 body{
     width: 100%;
+    margin: 0;
 }
 
 #Logo{
@@ -15,6 +16,8 @@ body{
 }
 
 #Header{
+
+    width: 100%;
     display: flex;
     justify-content: space-between;
     background-color: red;
@@ -25,9 +28,10 @@ body{
 
     display: flex;
     justify-content: space-evenly;
-
-
+    align-items: center;
+    /*padding: 0rem 1rem 0rem 1rem;*/
 }
+
 
 #Header_right {
     display: flex;
@@ -41,4 +45,13 @@ body{
     font-size: 1.5rem;
 
     padding: 0rem 1rem 0rem 1rem;
+}
+
+#Main {
+    display: flex;
+    flex-direction: column;
+}
+
+#Home_Logo {
+    height: 200px;
 }
