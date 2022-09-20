@@ -5,7 +5,7 @@
     <title>Game Academy</title>
     <link rel="icon" type="image/x-icon" href="https://cws.auckland.ac.nz/gas/api/FavIcon">
     <link rel="stylesheet" href="swat192.css">
-    <script src="swat192.js"></script>
+    <script src="swat192.js" defer></script>
 </head>
 <header>
     <div id="Header">
@@ -18,7 +18,7 @@
 
         <div id="Header_right">
             <h2>Home</h2>
-            <button onclick="ChangeDivContent()">Login</button>
+            <h2 onclick="ChangeDivContent()">Login</h2>
             <h2>Register</h2>
             <h2>Academy Shop</h2>
             <h2>Game Of Chess</h2>
@@ -37,6 +37,10 @@
 
     <img id="Home_Logo" src="https://cws.auckland.ac.nz/gas/images/Kb.svg" alt="Game Academy">
 
+</div>
+<div id="Main_Login"  style="display: none">
+    <img id="Login_Logo" src="https://cws.auckland.ac.nz/gas/images/Kb.svg" alt="Game Academy">
+    <h1>Time to log in</h1>
 </div>
 
 </body>
