@@ -55,11 +55,24 @@ body{
 #Main_Login{
     display: flex;
     justify-content: center;
-    flex-direction:row;
+    flex-direction:column;
     align-items: center;
     align-self: center;
 }
 
 #Login_Logo {
     height: 200px;
+}
+
+#GuestBook {
+
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    align-items: center;
+    align-self: center;
+}
+
+#GuestBook img {
+    height: 400px;
 }

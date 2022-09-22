@@ -17,30 +17,39 @@
         </div>
 
         <div id="Header_right">
-            <h2>Home</h2>
-            <h2 onclick="ChangeDivContent()">Login</h2>
+            <h2 onclick="ChangeDivContentHome()">Home</h2>
+            <h2 onclick="ChangeDivContentLogin()">Login</h2>
             <h2>Register</h2>
             <h2>Academy Shop</h2>
             <h2>Game Of Chess</h2>
-            <h2>Guest Book</h2>
+            <h2 onclick="ChangeDivContentGuestBook()">Guest Book</h2>
         </div>
     </div>
 </header>
 
 
 <body>
-<div id="Main_Home">
-
-    <h1>Welcome To Game Academy!</h1>
-    <p>Looking for board games? well you are in the right spot! Game Academy is dedicated to bring our customers the best <br>
+<div id="Home_Tab">
+    <div id="Main_Home">
+        <h1>Welcome To Game Academy!</h1>
+        <p>Looking for board games? well you are in the right spot! Game Academy is dedicated to bring our customers the best <br>
         products~~~~~~~~~write more stuff</p>
-
-    <img id="Home_Logo" src="https://cws.auckland.ac.nz/gas/images/Kb.svg" alt="Game Academy">
-
+        <img id="Home_Logo" src="https://cws.auckland.ac.nz/gas/images/Kb.svg" alt="Game Academy">
+    </div>
 </div>
-<div id="Main_Login"  style="display: none">
-    <img id="Login_Logo" src="https://cws.auckland.ac.nz/gas/images/Kb.svg" alt="Game Academy">
-    <h1>Time to log in</h1>
+
+<div id="Login_Tab"   style="display: none">
+    <div id="Main_Login">
+        <img id="Login_Logo" src="https://cws.auckland.ac.nz/gas/images/Kb.svg" alt="Game Academy">
+        <h1>Time to log in</h1>
+    </div>
+</div>
+
+<div id="GuestBook_Tab"   style="display: none">
+    <div id="GuestBook">
+        <img id="Guest_Logo" src="https://cws.auckland.ac.nz/gas/images/Kb.svg" alt="Game Academy">
+        <h1>Would you like to leave a comment?</h1>
+    </div>
 </div>
 
 </body>
