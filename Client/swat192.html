@@ -19,14 +19,16 @@
         <div id="Header_right">
             <h2 onclick="ChangeDivContentHome()">Home</h2>
             <h2 onclick="ChangeDivContentLogin()">Login</h2>
-            <h2>Register</h2>
-            <h2>Academy Shop</h2>
-            <h2>Game Of Chess</h2>
+            <h2 onclick="ChangeDivContentRegister()">Register</h2>
+            <h2 onclick="ChangeDivContentAcademyShop()">Academy Shop</h2>
+            <h2 onclick="ChangeDivContentGameOfChess()">Game Of Chess</h2>
             <h2 onclick="ChangeDivContentGuestBook()">Guest Book</h2>
         </div>
     </div>
 </header>
 
+<!----------------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------------->
 
 <body>
 <div id="Home_Tab">
@@ -38,12 +40,64 @@
     </div>
 </div>
 
+<!----------------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------------->
+
 <div id="Login_Tab"   style="display: none">
     <div id="Main_Login">
         <img id="Login_Logo" src="https://cws.auckland.ac.nz/gas/images/Kb.svg" alt="Game Academy">
         <h1>Time to log in</h1>
+        <form>
+            <label>Username</label> <br>
+            <input type="text" > <br>
+            <label>Password</label> <br>
+            <input type="password"> <br> <br>
+            <input type="submit" value="Login" name="Login" id="Login_Button">
+        </form>
     </div>
 </div>
+
+<!----------------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------------->
+
+<div id="Register_Tab"   style="display: none">
+    <div id="Register">
+        <img src="https://cws.auckland.ac.nz/gas/images/Kb.svg" alt="Game Academy">
+        <h1>Welcome to the Game Academy!</h1>
+        <form>
+            <label>Username</label> <br>
+            <input type="text" > <br>
+            <label>Password</label> <br>
+            <input type="password"> <br> <br>
+            <label>Address</label> <br>
+            <input type="text"> <br> <br>
+            <input type="submit" value="Login" name="Login" id="Register_Button">
+        </form>
+    </div>
+</div>
+
+<!----------------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------------->
+
+<div id="Shop_Tab"   style="display: none">
+    <div id="Academy_Shop">
+        <img src="https://cws.auckland.ac.nz/gas/images/Kb.svg" alt="Game Academy">
+        <h1>Have a look at our top products</h1>
+    </div>
+</div>
+
+<!----------------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------------->
+
+<div id="GameOfChess_Tab"   style="display: none">
+    <div id="GameOfChess">
+        <img src="https://cws.auckland.ac.nz/gas/images/Kb.svg" alt="Game Academy">
+        <h1>Relax and play another user in a game of Chess!</h1>
+    </div>
+</div>
+
+<!----------------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------------->
 
 <div id="GuestBook_Tab"   style="display: none">
     <div id="GuestBook">

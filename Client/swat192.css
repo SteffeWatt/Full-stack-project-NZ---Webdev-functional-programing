@@ -64,6 +64,42 @@ body{
     height: 200px;
 }
 
+#Register {
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    align-items: center;
+    align-self: center;
+}
+
+#Register img {
+    height: 200px;
+}
+
+#Academy_Shop {
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    align-items: center;
+    align-self: center;
+}
+
+#Academy_Shop img {
+    height: 200px;
+}
+
+#GameOfChess {
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    align-items: center;
+    align-self: center;
+}
+
+#GameOfChess img {
+    height: 200px;
+}
+
 #GuestBook {
 
     display: flex;
