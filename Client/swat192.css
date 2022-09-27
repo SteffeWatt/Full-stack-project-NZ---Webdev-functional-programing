@@ -78,15 +78,54 @@ body{
 
 #Academy_Shop {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction:column;
     align-items: center;
-    align-self: center;
+
 }
 
 #Academy_Shop img {
     height: 200px;
 }
+
+#itemSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    width: 50%;
+
+    border-style: solid;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 50px;
+}
+
+.card img {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-self: center;
+}
+
+.price{
+
+    font-size: 50px;
+}
+
+.buyButton {
+    height: 50px;
+    width: 200px;
+}
+
+
 
 #GameOfChess {
     display: flex;
@@ -112,3 +151,15 @@ body{
 #GuestBook img {
     height: 400px;
 }
+
+#commentSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
