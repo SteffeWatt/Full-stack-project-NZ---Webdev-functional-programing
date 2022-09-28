@@ -33,10 +33,11 @@
 <body>
 <div id="Home_Tab">
     <div id="Main_Home">
+        <img id="Home_Logo" src="https://cws.auckland.ac.nz/gas/images/Kb.svg" alt="Game Academy">
         <h1>Welcome To Game Academy!</h1>
         <p>Looking for board games? well you are in the right spot! Game Academy is dedicated to bring our customers the best <br>
-        products~~~~~~~~~write more stuff</p>
-        <img id="Home_Logo" src="https://cws.auckland.ac.nz/gas/images/Kb.svg" alt="Game Academy">
+        products. Take a look at our products! or maybe leave a comment?. Please enjoy your stay at The Game Academy.</p>
+        <h3 id="Home_Version">Javascript will change me</h3>
     </div>
 </div>
 
@@ -49,10 +50,10 @@
         <h1>Time to log in</h1>
         <form>
             <label>Username</label> <br>
-            <input type="text" > <br>
+            <input id="Login_Form_Name" type="text" > <br>
             <label>Password</label> <br>
-            <input type="password"> <br> <br>
-            <input type="submit" value="Login" name="Login" id="Login_Button">
+            <input id="Login_Form_Password" type="password"> <br> <br>
+            <input type="button" value="Login" name="Login" id="Login_Button" onclick="LoginUser()">
         </form>
     </div>
 </div>
@@ -63,7 +64,7 @@
 <div id="Register_Tab"   style="display: none">
     <div id="Register">
         <img src="https://cws.auckland.ac.nz/gas/images/Kb.svg" alt="Game Academy">
-        <h1 onclick="RegisterUser()">Welcome to the Game Academy!</h1>
+        <h1>Welcome to the Game Academy!</h1>
         <form>
             <label>Username</label> <br>
             <input type="text" id="Register_Form_User"><br>
@@ -71,7 +72,7 @@
             <input type="password" id="Register_Form_Password"> <br> <br>
             <label>Address</label> <br>
             <input type="text" id="Register_Form_Address"> <br> <br>
-            <input type="submit" value="Register" name="Login" id="Register_Button">
+            <input type="button" value="Register" name="Register" id="Register_Button" onclick="RegisterUser()">
         </form>
     </div>
 </div>
@@ -83,6 +84,8 @@
     <div id="Academy_Shop">
         <img src="https://cws.auckland.ac.nz/gas/images/Kb.svg" alt="Game Academy">
         <h1>Have a look at our top products</h1>
+        <h2>Please enter what you're looking for</h2>
+        <input id="Shop_Search" onchange="fetchItemsBySearch()">
         <div id="itemSection"></div>
     </div>
 </div>

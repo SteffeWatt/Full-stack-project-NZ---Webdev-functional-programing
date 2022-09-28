@@ -9,20 +9,13 @@ body{
     height: 100px;
 }
 
-#Main_Home {
-    display: flex;
-    justify-content: center;
-    flex-direction:column;
-    align-items: center;
-    align-self: center;
-}
-
 #Header{
 
 
     display: flex;
     justify-content: space-between;
     background-color: red;
+    border-bottom: black solid;
 
 }
 
@@ -37,6 +30,7 @@ body{
 
 #Header_right {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding-right: 1rem;
@@ -49,9 +43,30 @@ body{
     padding: 0rem 1rem 0rem 1rem;
 }
 
-#Home_Logo {
-    height: 200px;
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+
+#Main_Home {
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    align-items: center;
+    align-self: center;
+    padding: 0 20px 0 20px;
 }
+
+#Main_Home p {
+    font-size: 25px;
+}
+
+
+#Home_Logo {
+    height: 400px;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
 
 #Main_Login{
     display: flex;
@@ -63,23 +78,41 @@ body{
 
 #Main_Login form {
     display: flex;
+    justify-content: space-evenly;
     flex-direction: column;
     background-color: white;
 
     width: 50%;
-    height: 20%;
+    height: 400px;
 
     padding: 25px 100px 25px 100px;
     border-style: solid;
+}
+
+input[type="text"]{
+    height: 30px;
+    font-size: 30px;
+}
+input[type="password"]{
+    height: 30px;
+    font-size: 30px;
 }
 
 #Login_Logo {
     height: 200px;
 }
 
+#Main_Login label{
+    font-size: 30px;
+}
+
 #Login_Button {
     height: 50px;
+    font-size: 30px;
 }
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
 
 #Register {
     display: flex;
@@ -101,13 +134,21 @@ body{
     border-style: solid;
 }
 
+#Register label{
+    font-size: 30px;
+}
+
 #Register img {
     height: 200px;
 }
 
 #Register_Button {
     height: 50px;
+    font-size: 30px;
 }
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
 
 #Academy_Shop {
     display: flex;
@@ -115,6 +156,13 @@ body{
     flex-direction:column;
     align-items: center;
 
+}
+
+#Shop_Search {
+
+    width: 50%;
+    height: 30px;
+    margin-bottom: 25px;
 }
 
 #Academy_Shop img {
@@ -175,7 +223,8 @@ body{
     width: 200px;
 }
 
-
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
 
 #GameOfChess {
     display: flex;
@@ -188,6 +237,9 @@ body{
 #GameOfChess img {
     height: 200px;
 }
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
 
 #GuestBook {
 
@@ -241,8 +293,19 @@ body{
     width: 100%;
     font-size: 28px;
     border-bottom: black solid;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
 
 
+#Header_right h2:hover {
+    color: white;
+    cursor: pointer;
+}
+
+input[type="button"]:hover{
+    cursor: pointer;
 }
 
 

@@ -10,6 +10,8 @@ let GuestBookSection = document.getElementById("GuestBook_Tab");
 let GameSection = document.getElementById("GameOfChess_Tab");
 let ShopSection = document.getElementById("Shop_Tab");
 
+getServerVersion();
+
 
 
 // ------------------------------------------------------------------------------
@@ -61,6 +63,16 @@ function HideAllContent(){
 // functions that handles logic on the website
 // ------------------------------------------------------------------------------
 
+function getServerVersion(){
+    fetch('https://cws.auckland.ac.nz/gas/api/Version').then((data) => {
+
+        return data.text();
+    }).then((completedData) => {
+
+        document.getElementById("Home_Version").innerHTML="Version "+completedData;
+    })
+}
+
 function fetchComments() {
     fetch('https://cws.auckland.ac.nz/gas/api/Comments').then((data) => {
 
@@ -87,12 +99,7 @@ function WriteComment(){
 
         httpRequest.open("POST", url , true);
         httpRequest.setRequestHeader("Content-Type", "application/json");
-        httpRequest.onreadystatechange = function () {
 
-            if (httpRequest.readyState === 4 && httpRequest.status === 200) {
-                //var json = JSON.parse(httpRequest.responseText);
-            }
-        };
 
         var data =JSON.stringify({"comment": comment,
             "name": name});
@@ -105,7 +112,7 @@ function WriteComment(){
 
         fetchComments();
     }
-    
+
     if (!comment.trim()) {
         alert("please write a comment!");
 
@@ -139,13 +146,59 @@ function fetchItems() {
 
         })
 
-        console.log(completedData);
+
         document.getElementById("itemSection").innerHTML=itemData;
     })
 }
 
-function buyItem(test) {
-    alert("Thank you for purchasing: " + test);
+function fetchItemsBySearch() {
+
+    var search = document.getElementById("Shop_Search").value;
+
+    if (!document.getElementById("Shop_Search").value); {
+
+        fetch('https://cws.auckland.ac.nz/gas/api/Items/'+search).then((data) => {
+
+            return data.json();
+
+        }).then((completedData)=>{
+
+            let  itemData="";
+            completedData.map((values)=>{
+                itemData+=`<div class="card">
+                    <H1 class="product_name">${values.name}</H1>
+                    <h2 class="product_id">item-id: ${values.id}</h2>
+                    <img src="https://cws.auckland.ac.nz/gas/api/ItemPhoto/${values.id}">
+                    <p class="description">${values.description}</p>
+                    <div id="bottom_Card">
+                    <p class="price">Price: ${values.price}</p>
+                    <button class="buyButton" onclick="buyItem('${values.name}')">Buy</button>
+                    </div>
+                    
+                   </div>`
+                //${values.id}
+
+            })
+
+
+            document.getElementById("itemSection").innerHTML=itemData;
+        })
+
+    }
+
+    if (document.getElementById("Shop_Search").value == "") {
+
+        fetchItems();
+    }
+
+
+
+
+}
+
+function buyItem(productname) {
+    alert("Thank you for purchasing: " + productname);
+
 }
 
 function RegisterUser() {
@@ -153,8 +206,51 @@ function RegisterUser() {
     var name = document.querySelector('#Register_Form_User').value;
     var password = document.querySelector('#Register_Form_Password').value;
     var address = document.querySelector('#Register_Form_Address').value;
-    console.log(name);
-    console.log(password);
-    console.log(address);
+
+
+    if (name.trim() && password.trim() && address.trim()) {
+
+        var httpRequest = new XMLHttpRequest();
+        var url = 'https://cws.auckland.ac.nz/gas/api/Register';
+
+        httpRequest.open("POST", url , true);
+        httpRequest.setRequestHeader("Content-Type", "application/json");
+        httpRequest.onreadystatechange = function () {
+
+            if (httpRequest.readyState == XMLHttpRequest.DONE){
+
+
+                if (httpRequest.responseText === "Username not available"){
+                    alert(httpRequest.responseText + ": please enter another Username");
+                }
+                else {
+                    alert(httpRequest.responseText + ": Welcome to The Game Academy")
+                    ChangeDivContentHome();
+                }
+            }
+        };
+
+        var data =JSON.stringify({"username": name,
+                                        "password": password,
+                                        "address": address});
+
+        httpRequest.send(data);
+
+        document.querySelector('#Register_Form_User').value = "";
+        document.querySelector('#Register_Form_Password').value = "";
+        document.querySelector('#Register_Form_Address').value = "";
+    }
+
+    if (!name.trim() || !password.trim() || !address.trim()) {
+        alert("please fill out the necessary fields!");
+    }
+
+}
+
+function LoginUser() {
+    alert("This function does not work :(")
+    document.querySelector('#Login_Form_Name').value = "";
+    document.querySelector('#Login_Form_Password').value = "";
+    ChangeDivContentHome();
 
 }
