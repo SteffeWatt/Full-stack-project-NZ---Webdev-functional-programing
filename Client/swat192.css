@@ -77,6 +77,10 @@ body{
     height: 200px;
 }
 
+#Login_Button {
+    height: 50px;
+}
+
 #Register {
     display: flex;
     justify-content: center;
@@ -198,6 +202,26 @@ body{
     height: 400px;
 }
 
+#GuestBook form{
+    background-color: white;
+    border-style: solid;
+    margin-bottom: 50px;
+    padding: 20px;
+    font-size: 28px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+    width: 50%;
+}
+
+#Comment_Button {
+    height: 50px;
+    font-size: 30px;
+
+}
+
 #commentSection {
     display: flex;
     flex-direction: column;
@@ -206,6 +230,7 @@ body{
 
     width: 50%;
     padding: 0 25px 0 25px;
+    margin-bottom: 50px;
 
     background-color: white;
     border-style: solid;

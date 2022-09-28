@@ -104,6 +104,15 @@
     <div id="GuestBook">
         <img id="Guest_Logo" src="https://cws.auckland.ac.nz/gas/images/Kb.svg" alt="Game Academy">
         <h1>Would you like to leave a comment?</h1>
+        <form>
+            <label>Comment</label> <br>
+            <input type="text" id="Comment_Input" > <br>
+            <label>Name</label> <br>
+            <input type="text" id="Comment_NameInput"> <br> <br>
+            <input type="button" value="Comment" name="Comment" id="Comment_Button" onclick="WriteComment()">
+        </form>
+
+        <h1>Previous comments</h1>
         <div id="commentSection">
 
         </div>

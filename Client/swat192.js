@@ -75,16 +75,50 @@ function fetchComments() {
     })
 }
 
+function WriteComment(){
+
+    let comment = document.querySelector('#Comment_Input').value;
+    let name = document.querySelector('#Comment_NameInput').value;
+
+    if (comment.trim()) {
+
+        var httpRequest = new XMLHttpRequest();
+        var url = 'https://cws.auckland.ac.nz/gas/api/Comment';
+
+        httpRequest.open("POST", url , true);
+        httpRequest.setRequestHeader("Content-Type", "application/json");
+        httpRequest.onreadystatechange = function () {
+
+            if (httpRequest.readyState === 4 && httpRequest.status === 200) {
+                //var json = JSON.parse(httpRequest.responseText);
+            }
+        };
+
+        var data =JSON.stringify({"comment": comment,
+            "name": name});
+
+        httpRequest.send(data);
+        alert("your comment is received!");
+
+        document.querySelector('#Comment_Input').value = "";
+        document.querySelector('#Comment_NameInput').value = "";
+
+        fetchComments();
+    }
+    
+    if (!comment.trim()) {
+        alert("please write a comment!");
+
+        document.querySelector('#Comment_Input').value = "";
+
+    }
+
+}
+
 function fetchItems() {
     fetch('https://cws.auckland.ac.nz/gas/api/AllItems').then((data) => {
 
-        //document.getElementById("commentSection").innerHTML = response.text();
-        //console.log(data);
-
-
         return data.json();
-
-
 
     }).then((completedData)=>{
 
