@@ -91,12 +91,15 @@ function fetchItems() {
         let  itemData="";
         completedData.map((values)=>{
             itemData+=`<div class="card">
-                    <H1 class="id">item-id: ${values.id}</H1>
-                    <h2 class="name">${values.name}</h2>
+                    <H1 class="product_name">${values.name}</H1>
+                    <h2 class="product_id">item-id: ${values.id}</h2>
                     <img src="https://cws.auckland.ac.nz/gas/api/ItemPhoto/${values.id}">
                     <p class="description">${values.description}</p>
+                    <div id="bottom_Card">
                     <p class="price">Price: ${values.price}</p>
-                    <button class="buyButton" onclick="buyItem(${values.name})">Buy</button>
+                    <button class="buyButton" onclick="buyItem('${values.name}')">Buy</button>
+                    </div>
+                    
                    </div>`
                     //${values.id}
 
@@ -108,5 +111,16 @@ function fetchItems() {
 }
 
 function buyItem(test) {
-    alert(test);
+    alert("Thank you for purchasing: " + test);
+}
+
+function RegisterUser() {
+
+    var name = document.querySelector('#Register_Form_User').value;
+    var password = document.querySelector('#Register_Form_Password').value;
+    var address = document.querySelector('#Register_Form_Address').value;
+    console.log(name);
+    console.log(password);
+    console.log(address);
+
 }

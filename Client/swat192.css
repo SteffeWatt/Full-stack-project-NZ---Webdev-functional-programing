@@ -2,6 +2,7 @@
 body{
     width: 100%;
     margin: 0;
+    background-color: gray;
 }
 
 #Logo{
@@ -18,7 +19,7 @@ body{
 
 #Header{
 
-    width: 100%;
+
     display: flex;
     justify-content: space-between;
     background-color: red;
@@ -60,6 +61,18 @@ body{
     align-self: center;
 }
 
+#Main_Login form {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+
+    width: 50%;
+    height: 20%;
+
+    padding: 25px 100px 25px 100px;
+    border-style: solid;
+}
+
 #Login_Logo {
     height: 200px;
 }
@@ -72,8 +85,24 @@ body{
     align-self: center;
 }
 
+#Register form{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+
+    width: 50%;
+    height: 20%;
+
+    padding: 25px 100px 25px 100px;
+    border-style: solid;
+}
+
 #Register img {
     height: 200px;
+}
+
+#Register_Button {
+    height: 50px;
 }
 
 #Academy_Shop {
@@ -100,6 +129,7 @@ body{
     flex-direction: column;
     justify-content: space-evenly;
 
+    background-color: white;
     width: 50%;
 
     border-style: solid;
@@ -113,15 +143,31 @@ body{
     width: 200px;
     display: flex;
     align-self: center;
+    border-style: solid;
 }
 
-.price{
+.product_name {
+    margin: 10px;
+}
 
+.product_id {
+    margin: 10px;
+    font-size: 20px;
+}
+
+.description {
+    font-size: 25px;
+}
+
+#bottom_Card {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     font-size: 50px;
 }
 
 .buyButton {
-    height: 50px;
+    height: 100px;
     width: 200px;
 }
 
@@ -157,6 +203,21 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    width: 50%;
+    padding: 0 25px 0 25px;
+
+    background-color: white;
+    border-style: solid;
+    word-wrap: anywhere;
+}
+
+#commentSection p{
+    width: 100%;
+    font-size: 28px;
+    border-bottom: black solid;
+
+
 }
 
 

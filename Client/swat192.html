@@ -63,15 +63,15 @@
 <div id="Register_Tab"   style="display: none">
     <div id="Register">
         <img src="https://cws.auckland.ac.nz/gas/images/Kb.svg" alt="Game Academy">
-        <h1>Welcome to the Game Academy!</h1>
+        <h1 onclick="RegisterUser()">Welcome to the Game Academy!</h1>
         <form>
             <label>Username</label> <br>
-            <input type="text" > <br>
+            <input type="text" id="Register_Form_User"><br>
             <label>Password</label> <br>
-            <input type="password"> <br> <br>
+            <input type="password" id="Register_Form_Password"> <br> <br>
             <label>Address</label> <br>
-            <input type="text"> <br> <br>
-            <input type="submit" value="Login" name="Login" id="Register_Button">
+            <input type="text" id="Register_Form_Address"> <br> <br>
+            <input type="submit" value="Register" name="Login" id="Register_Button">
         </form>
     </div>
 </div>
